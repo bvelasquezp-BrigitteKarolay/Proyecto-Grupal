@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITNESS - Despierta tu mejor versión</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background-color: #fff;
+      color: #222;
+    }
+
+    /*ENCABEZADO PRINCIPAL*/
+    header.hero {
+      background-image: url('https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/IMAGEN%202%20GYM.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 140px 20px;
+      position: relative;
+    }
+
+    header.hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    .overlay {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 55px;
+      margin: 10px 0;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 12px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /*SECCIONES GENERALES*/
+    section {
+      padding: 60px 25px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /*SECCION BIENVENIDOS*/
+    .bienvenida {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .bienvenida-texto {
+      flex: 1 1 55%;
+    }
+
+    .bienvenida-texto h2 {
+      font-size: 38px;
+      color: #111;
+      text-align: left;
+    }
+
+    .bienvenida-texto p {
+      text-align: left;
+      font-size: 17px;
+    }
+
+    .bienvenida-logo {
+      flex: 1 1 35%;
+      text-align: center;
+    }
+
+    .bienvenida-logo img {
+      width: 250px;
+    }
+
+    /*SECCION NOSOTROS + SERVICIOS*/
+    .flex-seccion {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      flex-direction: row; 
+    }
+
+    .info-lateral {
+      flex: 1 1 55%;
+    }
+
+    .info-lateral h2 {
+      text-align: left;
+      color: #111;
+    }
+
+    .info-lateral ul {
+      padding-left: 20px;
+    }
+
+    .info-lateral li {
+      margin-bottom: 8px;
+    }
+
+    .imagen-lateral {
+      flex: 1 1 40%;
+      text-align: center;
+    }
+
+    .imagen-lateral img {
+      width: 330px;
+      border-radius: 10px;
+    }
+
+    /*ENTRENADORES*/
+    .bg-light {
+      background-color: #f5f5f5;
+    }
+
+    .entrenadores {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .entrenadores article {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /*CONTACTO*/
+    .contacto, .redes {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    .contacto li, .redes li {
+      margin: 6px 0;
+    }
+
+    .redes a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /*PIE DE PAGINA*/
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /*RESPONSIVE*/
+    @media (max-width: 768px) {
+      .bienvenida, .flex-seccion {
+        flex-direction: column;
+        text-align: center;
+      }
+      .bienvenida-texto h2 {
+        text-align: center;
+      }
+      .info-lateral h2 {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="hero">
+    <div class="overlay">
+      <div class="hero-text">
+        <h1>FITNESS</h1>
+        <p>Despierta tu mejor versión</p>
+        <nav>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros-servicios">Nosotros</a></li>
+            <li><a href="#entrenadores">Entrenadores</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--SECCION INICIO-->
+  <section id="inicio" class="bienvenida">
+    <div class="bienvenida-texto">
+      <h2>Bienvenidos a FITNESS</h2>
+      <p>En FITNESS creemos que todos pueden alcanzar su mejor versión. Nuestro gimnasio ofrece un espacio moderno y motivador, equipado con máquinas de última generación. Cada sección busca inspirarte a adoptar un estilo de vida saludable.</p>
+    </div>
+    <div class="bienvenida-logo">
+      <img src="https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/LOGO%20GYM.png" 
+           alt="Logo Fitness">
+    </div>
+  </section>
+
+  <!--SECCION NOSOTROS Y SERVICIOS-->
+  <section id="nosotros-servicios" class="flex-seccion">
+    <div class="imagen-lateral">
+      <img src="https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/IMAGEN%201%20GYM%20(1).png" 
+           alt="Chica Fitness">
+    </div>
+    <div class="info-lateral">
+      <h2>Nosotros</h2>
+      <p>FITNESS nació con el propósito de inspirar a las personas a alcanzar su máximo potencial. Promovemos el bienestar físico y mental a través de la disciplina, el esfuerzo y la constancia.</p>
+
+      <h2>Servicios</h2>
+      <ul>
+        <li><strong>Entrenamiento personalizado:</strong> Asesoría individual según tus metas.</li>
+        <li><strong>Clases grupales:</strong> Zumba, yoga, spinning y entrenamiento funcional.</li>
+        <li><strong>Rutinas en línea:</strong> Entrena desde cualquier lugar.</li>
+        <li><strong>Plan nutricional:</strong> Guía profesional para una alimentación saludable.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--SECCION ENTRENADORES-->
+  <section id="entrenadores" class="bg-light">
+    <h2>Nuestros Entrenadores</h2>
+    <div class="entrenadores">
+      <article>
+        <h3>Karolay</h3>
+        <p>Especialista en fuerza y rendimiento. Acompaña a cada miembro en su progreso.</p>
+      </article>
+      <article>
+        <h3>Vanessa</h3>
+        <p>Entrenadora certificada en pilates y equilibrio corporal. Fomenta la armonía y bienestar.</p>
+      </article>
+      <article>
+        <h3>Sammy</h3>
+        <p>Instructor en cardio y resistencia. Diseña rutinas efectivas para todos los niveles.</p>
+      </article>
+    </div>
+  </section>
+
+  <!--SECCION CONTACTO-->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <ul class="contacto">
+      <li>Teléfono: +51 929 377 161 (Vanessa)</li>
+      <li>Teléfono: +51 948 019 629 (Karolay)</li>
+      <li>Correo: Fitness@gmail.com</li>
+    </ul>
+    <p>Síguenos en redes:</p>
+    <ul class="redes">
+      <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/" target="_blank">TikTok</a></li>
+      <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+    </ul>
+  </section>
+
+
+  <!-- PIE DE PAGINA -->
+  <footer>
+    <p>© 2025 FITNESS - Despierta tu mejor versión</p>
+    <p>Proyecto grupal desarrollado por Vanessa y Karolay para el curso Introducción al Desarrollo Web</p>
+  </footer>
+
+</body>
+</html>
