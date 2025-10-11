@@ -262,14 +262,33 @@ footer p {
 
 /*RESPONSIVE*/
 @media (max-width: 768px) {
+    header.hero {
+        height: 90dvh; 
+        background-position: center;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0;
+        background: none;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
     .bienvenida, .flex-seccion {
-    flex-direction: column;
-    text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
-    .bienvenida-texto h2 {
-    text-align: center;
+
+    .bienvenida-texto, .info-lateral {
+        flex: 1 1 100%;
     }
-    .info-lateral h2 {
-    text-align: center;
+
+    .imagen-lateral img, .bienvenida-logo img {
+        width: 80%;
+        max-width: 300px;
     }
 }
