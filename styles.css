@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* GENERAL */
 body {
@@ -34,37 +35,41 @@ section {
 header.hero {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 60px;
     background-color: #000;
     display: flex; 
     align-items: center;
     justify-content: space-between;
+    padding: 0 30px;
     z-index: 100;
 }
 
-/* Texto FITNESS */
 .hero-text h1 {
-    margin: 0;
+    align-items: center;
+    font-size: 20px;
+    transform: scaleY(2);
 }
 
 .hero-text h1 a {
     color: #f1f1f1;
     text-decoration: none;
-    font-size: 26px;
+    font-family: "Roboto Condensed", sans-serif;
     letter-spacing: 2px;
+    align-items: center;
 }
 
 /* MENÚ */
 .main-menu {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     height: 60px;
     background-color: #000;
     display: flex;
-    align-items: center;  
-    justify-content: space-between;  
+    align-items:center;  
+    justify-content: right;
     z-index: 100;
 }
 
@@ -72,8 +77,8 @@ header.hero {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 0;
-    gap: 30px;
+    padding-right: 30px;
+    gap: 40px;
 }
 
 .main-menu li {
@@ -94,6 +99,10 @@ header.hero {
 
 .main-menu a:hover {
     color: white;
+}
+
+#menu-toggle, .menu-icon {
+    display: none;
 }
 
 /* IMAGEN DE FONDO */
@@ -269,30 +278,66 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    header.hero {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        padding: 10px 15px;
+    }
+
+    .main-menu label {
+        font-size: 26px;
+        color: white;
+        cursor: pointer;
+        padding-right: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu-icon {
+        justify-content: flex-end;
+        display: block;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
     .main-menu ul {
         display: none;
         flex-direction: column;
         background-color: #000;
         position: absolute;
-        top: 60px; 
-        width: 100%;
+        top: 60px;
         left: 0;
+        width: 100%;
+        text-align: center;
         z-index: 100;
     }
 
-    .main-menu::before {
-        content: "\f015";
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
+    #menu-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    .main-menu li {
+        padding: 15px 0;
+    }
+
+    .main-menu a {
+        color: #bbb;
+        text-decoration: none;
         display: block;
+        transition: color 0.3s;
+    }
+
+    .main-menu a:hover {
         color: white;
-        font-weight: bold;
-        cursor: pointer;
-        background-color: #000;
-        text-align: rigth;
-        align-content:flex-end;
-        padding-left: 20px;
     }
 
     div.background {
@@ -304,18 +349,7 @@ footer {
         height: auto;
         justify-content: center;
         align-items: center;
-        top: 35px; 
-    }
-
-    div.background::before {
-        content: "";
-        position: absolute;
-        top: 0; 
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.5);
-        z-index: 1;
+        top: 70px; 
     }
 }
 
