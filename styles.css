@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* GENERAL */
 body {
     font-family: "Arial", sans-serif;
     margin: 0;
@@ -8,84 +9,10 @@ body {
     color: #222;
 }
 
-/*ENCABEZADO PRINCIPAL*/
-header.hero {
-    background-image: url('https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/IMAGEN%202%20GYM.png');
-    background-size: cover;
-    background-attachment: local;
-    height: 100dvh; 
-    width: 100%; 
-    background-position: center top;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-}
-
-header.hero::before {
-    content: "";
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 0;
-}
-
-.overlay { 
-    position: relative; 
-    z-index: 1; 
-}
-
-nav ul {
-    list-style: none;
-    padding: 10px 20px;
-    display: inline-block;
-    background: rgba(255,255,255,0.1);
-    border-radius: 40px;
-}
-
-nav li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 25px;
-  transition: background 0.3s, color 0.3s;
-}
-
-nav a:hover {
-    background-color: #e63959;
-
-}
-
-/* SECCIONES GENERALES */
-section {
-    padding: 60px 25px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-section:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-
 h2 {
     text-align: center;
-    justify-content: center;
     margin-bottom: 30px;
-    position:relative;
+    position: relative;
 }
 
 h2::after {
@@ -98,13 +25,91 @@ h2::after {
     border-radius: 3px;
 }
 
-/*SECCION BIENVENIDOS*/
+section {
+    padding: 60px 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* MENÚ */
+.main-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    display: flex;
+    align-items: center;  
+    justify-content: center;  
+    z-index: 100;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.main-menu li {
+    display: flex;
+    align-items: center;  
+}
+
+.main-menu a {
+    color: rgb(129, 129, 129);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 15px; 
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    transition: color 0.3s;
+}
+
+.main-menu a:hover {
+    color: white;
+}
+
+/* HERO / IMAGEN DE FONDO */
+div.background {
+    position: relative;
+    background-image: url('https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/IMAGEN%202%20GYM.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 20vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.background::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* SECCIÓN BIENVENIDA */
 .bienvenida {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    margin-top: 60px;
 }
 
 .bienvenida-texto {
@@ -113,8 +118,6 @@ h2::after {
 
 .bienvenida-texto h2 {
     font-size: 38px;
-    color: #111;
-    text-align: center;
 }
 
 .bienvenida-texto p {
@@ -128,17 +131,17 @@ h2::after {
 }
 
 .bienvenida-logo img {
-    width: 250px;
+    max-width: 100%;
+    height: auto;
 }
 
-/*SECCION NOSOTROS + SERVICIOS*/
+/* NOSOTROS Y SERVICIOS */
 .flex-seccion {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 25px;
-    flex-direction: row; 
 }
 
 .info-lateral {
@@ -146,8 +149,8 @@ h2::after {
 }
 
 .info-lateral h2 {
-    text-align: center ;
     color: #111;
+    text-align: center;
 }
 
 .info-lateral ul {
@@ -160,15 +163,16 @@ h2::after {
 
 .imagen-lateral {
     flex: 1 1 40%;
-    text-align: center;
+    text-align: justify;
 }
 
 .imagen-lateral img {
-    width: 330px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
-/*ENTRENADORES*/
+/* ENTRENADORES */
 .bg-light {
     background-color: #f5f5f5;
 }
@@ -189,29 +193,27 @@ h2::after {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
-/*CONTACTO*/
+/* CONTACTO */
 .contacto {
     list-style: none;
     padding: 0;
     text-align: center;
 }
 
-.contacto li{
+.contacto li {
     margin: 6px 0;
 }
 
-/*PIE DE PAGINA*/
+/* FOOTER */
 footer {
-    background: #000000;
+    background: #000;
     color: #f1f1f1;
     text-align: center;
     padding: 25px;
     font-size: 14px;
-    letter-spacing: 0.5px;
 }
 
 .redes {
-    background-color: #000000;
     list-style: none;
     display: flex; 
     justify-content: center; 
@@ -224,7 +226,7 @@ footer {
     width: 55px;
     height: 55px;
     border-radius: 50%;         
-    background-color: #000000;  
+    background-color: #000;  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,52 +245,61 @@ footer {
 }
 
 .redes li:hover a {
-    color: rgb(255, 255, 255);              
+    color: #fff;              
 }
 
-#redes {
-    color: white;
-}
-
-.linea-div {
-    color: #f1f1f1;
-}
-
-footer p {
-    margin-top: 4px;
-    margin-bottom: 4px; 
-}
-
-
-/*RESPONSIVE*/
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    header.hero {
-        height: 90dvh; 
-        background-position: center;
-    }
-
-    nav ul {
-        display: block;
-        padding: 0;
-        background: none;
-    }
-
-    nav li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .bienvenida, .flex-seccion {
+    .main-menu {
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .main-menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px; 
+        width: 100%;
+        left: 0;
+        z-index: 100;
+    }
+
+    .main-menu::before {
+        content: "Menú";
+        display: block;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #000;
+        text-align: left;
+        align-content:flex-start;
+        padding-left: 20px;
+    }
+
+    .main-menu:hover ul {
+        display: flex;
+    }
+
+    .main-menu li {
         text-align: center;
+        padding: 15px 0;
     }
 
-    .bienvenida-texto, .info-lateral {
-        flex: 1 1 100%;
-    }
-
-    .imagen-lateral img, .bienvenida-logo img {
-        width: 80%;
-        max-width: 300px;
+    div.background {
+        position: relative;
+        background-image: url('https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/IMAGEN%202%20GYM.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        width: 100%;
+        height: auto;
+        left: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
     }
 }
+
