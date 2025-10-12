@@ -2,7 +2,7 @@
 
 /* GENERAL */
 body {
-    font-family: "Arial", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     line-height: 1.5;
     background-color: #fff;
@@ -31,8 +31,28 @@ section {
     margin: auto;
 }
 
-section:nth-child(even) {
-    background-color: #f9f9f9;
+header.hero {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+/* Texto FITNESS */
+.hero-text h1 {
+    margin: 0;
+}
+
+.hero-text h1 a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 26px;
+    letter-spacing: 2px;
 }
 
 /* MENÚ */
@@ -44,7 +64,7 @@ section:nth-child(even) {
     background-color: #000;
     display: flex;
     align-items: center;  
-    justify-content: center;  
+    justify-content: space-between;  
     z-index: 100;
 }
 
@@ -76,7 +96,7 @@ section:nth-child(even) {
     color: white;
 }
 
-/* HERO / IMAGEN DE FONDO */
+/* IMAGEN DE FONDO */
 div.background {
     position: relative;
     background-image: url('https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/IMAGEN%202%20GYM.png');
@@ -250,13 +270,6 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .main-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-    }
-
     .main-menu ul {
         display: none;
         flex-direction: column;
@@ -269,37 +282,40 @@ footer {
     }
 
     .main-menu::before {
-        content: "Menú";
+        content: "\f015";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
         display: block;
         color: white;
         font-weight: bold;
         cursor: pointer;
         background-color: #000;
-        text-align: left;
-        align-content:flex-start;
+        text-align: rigth;
+        align-content:flex-end;
         padding-left: 20px;
-    }
-
-    .main-menu:hover ul {
-        display: flex;
-    }
-
-    .main-menu li {
-        text-align: center;
-        padding: 15px 0;
     }
 
     div.background {
         position: relative;
         background-image: url('https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/IMAGEN%202%20GYM.png');
         background-repeat: no-repeat;
-        background-position: center top;
+        background-position:center top;
         width: 100%;
         height: auto;
-        left: 0;
-        bottom: 0;
         justify-content: center;
         align-items: center;
+        top: 35px; 
+    }
+
+    div.background::before {
+        content: "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1;
     }
 }
 
