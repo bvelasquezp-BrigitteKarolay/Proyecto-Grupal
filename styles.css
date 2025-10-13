@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Noto Sans TC", sans-serif;
     font-style: oblique 15dg;
@@ -33,76 +38,61 @@ section {
     margin: auto;
 }
 
-header.hero {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #000;
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    z-index: 100;
-}
-
-.hero-text h1 {
-    align-items: center;
-    font-size: 20px;
-    transform: scaleY(2);
-}
-
-.hero-text h1 a {
-    color: #f1f1f1;
+a {
     text-decoration: none;
-    font-family: "Roboto Condensed", sans-serif;
-    letter-spacing: 2px;
-    align-items: center;
+    color: inherit;
 }
 
-/* MENÚ */
-.main-menu {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #000;
-    display: flex;
-    align-items:center;  
-    justify-content: right;
-    z-index: 100;
+header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  position: fixed; 
+  width: 100vw;
+  top: 0;
+  z-index: 1000; 
 }
 
-.main-menu ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding-right: 50px;
-    gap: 40px;
+header h1 {
+  font-family: "Alumni Sans SC", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
 }
 
-.main-menu li {
-    display: flex;
-    align-items: center;  
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.main-menu a {
-    color: rgb(129, 129, 129);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0 15px; 
-    height: 100%;
-    display: flex;
-    align-items: center; 
-    transition: color 0.3s;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.main-menu a:hover {
-    color: white;
+nav a:hover {
+  color: #e63956;
 }
 
-#menu-toggle, .menu-icon {
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+}
+
+#menu-toggle {
     display: none;
 }
 
@@ -297,69 +287,30 @@ hr {
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
-    header.hero {
-        font-size: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #000;
-        padding: 10px 15px;
+    nav ul {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 200px;
+        height: 100vh;
+        background-color: #111;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        padding-top: 40px;
+        padding-left: 20px;
+        gap: 25px;
+        transition: right 0.3s ease;
     }
 
-    .hero-text h1 {
-        font-size: 20px;
-    }
-
-    .main-menu label {
-        font-size: 26px;
-        color: white;
-        cursor: pointer;
-        padding-right: 30px;
-        display: flex;
-        align-items: center;
-    }
-
-    #menu-toggle {
-        display: none;
+    #menu-toggle:checked ~ nav ul {
+        right: 0;
     }
 
     .menu-icon {
-        justify-content: flex-end;
         display: block;
-        font-size: 20px;
-        color: white;
-        cursor: pointer;
-    }
-
-    .main-menu ul {
-        display: none;
-        flex-direction: column;
-        background-color: #000;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 100;
-    }
-
-    #menu-toggle:checked ~ ul {
-        display: flex;
-    }
-
-    .main-menu li {
-        padding: 15px 0;
-    }
-
-    .main-menu a {
-        color: #bbb;
-        text-decoration: none;
-        display: block;
-        transition: color 0.3s;
-    }
-
-    .main-menu a:hover {
-        color: white;
+        right: 0;
+        padding-right: 30px;
     }
 
     div.background {
@@ -371,7 +322,7 @@ hr {
         height: auto;
         justify-content: center;
         align-items: center;
-        top: 70px; 
+        top: 50px; 
     }
 }
 
