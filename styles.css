@@ -1,336 +1,346 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+/* ESTILOS GENERALES */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Noto Sans TC", sans-serif;
-    font-style: oblique 15dg;
-    margin: 0;
-    line-height: 1.5;
-    background-color: #fff;
-    color: #313131;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; 
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 3px;
-    background: #e63959;
-    margin: 8px auto 0;
-    border-radius: 3px;
-}
-
-section {
-    padding: 60px 25px;
-    max-width: 1000px;
-    margin: auto;
-}
-
+/* Enlaces y títulos */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #111;
+}
+
+/* Botones base */
+.btn, .btn-secundario {
+    display: inline-block;
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* ENCABEZADO Y MENÚ */
 header {
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000;
-  color: white;
-  padding: 10px 20px;
-  position: fixed; 
-  width: 100vw;
-  top: 0;
-  z-index: 1000; 
+    font-family: "Oswald", sans-serif;
+    font-stretch: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1 {
-  font-family: "Alumni Sans SC", sans-serif;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
+.logo-nombre img {
+    max-width: 100px;
 }
 
+/* Navegación */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+    text-transform: uppercase;
 }
 
-nav a:hover {
-  color: #e63956;
+nav ul li a:hover {
+    color: #e63946;
 }
 
+/* Menú responsive */
 .menu-icon {
     display: none;
-    font-size: 1.8rem;
+    font-size: 1.8em;
     cursor: pointer;
-    position: absolute;
-    right: 20px; 
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1100;
 }
 
 #menu-toggle {
     display: none;
 }
 
-/* IMAGEN DE FONDO */
-div.background {
-    position: relative;
-    background-image: url('https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/IMAGEN%202%20GYM.png');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding-bottom: 20vh;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* SECCIÓN BIENVENIDA */
-#inicio {
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.bienvenida {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 60px;
-}
-
-.bienvenida-texto {
-    flex: 1 1 55%;
-}
-
-.bienvenida-texto h2 {
-    font-size: 38px;
-}
-
-.bienvenida-texto p {
-    text-align: left;
-    font-size: 17px;
-}
-
-.bienvenida-logo {
-    flex: 1 1 35%;
-    text-align: center;
-}
-
-.bienvenida-logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* NOSOTROS Y SERVICIOS */
-#nosotros-servicios {
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.flex-seccion {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-.info-lateral {
-    flex: 1 1 55%;
-}
-
-.info-lateral h2 {
-    color: #111;
-    text-align: center;
-}
-
-.info-lateral ul {
-    padding-left: 20px;
-}
-
-.info-lateral li {
-    margin-bottom: 8px;
-}
-
-.imagen-lateral {
-    flex: 1 1 40%;
-    text-align: justify;
-}
-
-.imagen-lateral img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* ENTRENADORES */
-#entrenadores{
-    margin-top: 50px;
-    margin-bottom: 0px;
-}
-
-.bg-light {
-    background-color: #f5f5f5;
-    padding-top: 30px;
-}
-
-.entrenadores {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.entrenadores article {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 280px;
-    text-align: center;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-}
-
-/* CONTACTO */
-.contacto {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.contacto li {
-    margin: 6px 0;
-}
-
-/* FOOTER */
-footer {
-    background: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-}
-
-#logo {
-    padding-top: 40px;
-    padding-bottom: 30px;
-}
-
-#redes{
-    padding: 25px;
-}
-
-#redes p {
-    margin-bottom: 20px;
-}
-
-.redes {
-    list-style: none;
-    display: flex; 
-    justify-content: center; 
-    gap: 20px;   
-    padding: 0;
-    margin-top: 10px;
-}
-
-hr {
-    margin: 0;
-}
-
-.redes li {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;         
-    background-color: #ffffff;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow:#646464;
-}
-
-.redes li:hover {
-    transform: scale(1.1);  
-}
-
-.redes a {
-    color: #000000;    
-    font-size: 20px;          
-    text-decoration: none;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
+/* Menú móvil */
+@media (max-width: 768px) {
     nav ul {
-        position: fixed;
-        top: 60px;
-        right: -100%;
-        width: 200px;
-        height: 100vh;
-        background-color: #111;
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: start;
-        padding-top: 40px;
-        padding-left: 20px;
-        gap: 25px;
-        transition: right 0.3s ease;
+        background-color: #111;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
     }
 
-    #menu-toggle:checked ~ nav ul {
-        right: 0;
+    #menu-toggle:checked + .menu-icon + nav ul {
+        display: flex;
     }
 
     .menu-icon {
         display: block;
-        right: 0;
-        padding-right: 30px;
-    }
-
-    div.background {
-        position: relative;
-        background-image: url('https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/IMAGEN%202%20GYM.png');
-        background-repeat: no-repeat;
-        background-position:center top;
-        width: 100%;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-        top: 50px; 
     }
 }
 
-@media (min-width: 600px) and (max-width: 1024px) {
-    div.background {
-        width: 100%;
-        height: 40vh;
-        aspect-ratio: 16 / 9;
-        background-size: contain;
+/* SECCIÓN HERO */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background: linear-gradient(90deg, #e6394615, #ffffff);
+}
+
+.hero-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-texto h2 {
+    font-size: 2.5em;
+    color: #e63946;
+    margin-bottom: 15px;
+}
+
+.hero-texto p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #b4242e;
+}
+
+.hero-imagen img {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* SECCIÓN NOSOTROS */
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    gap: 40px;
+    background-color: #f9f9f9;
+}
+
+.info .texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info .texto h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info .texto p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    border: 2px solid #e63946;
+    color: #e63946;
+}
+
+.btn-secundario:hover {
+    background-color: #e63946;
+    color: #fff;
+}
+
+.info .imagen img {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* SECCIÓN SERVICIOS */
+#servicios {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+#servicios > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+.servicios-grid article {
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.servicios-grid article:hover {
+    transform: translateY(-5px);
+}
+
+.servicios-grid i {
+    font-size: 2em;
+    color: #e63946;
+    margin-bottom: 15px;
+}
+
+/* SECCIÓN TESTIMONIOS */
+.bg-light {
+    background-color: #f8f8f8;
+}
+
+#testimonios {
+    padding: 60px 30px;
+}
+
+#testimonios > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.testimonios-grid article {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    font-style: italic;
+}
+
+.testimonios-grid h4 {
+    text-align: right;
+    color: #e63946;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* SECCIÓN FAQ */
+#faq {
+    padding: 60px 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+#faq details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#faq summary {
+    font-weight: 600;
+    color: #e63946;
+}
+
+#faq p {
+    margin-top: 10px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    margin: 15px 0;
+}
+
+footer .redes a {
+    color: #fff;
+    font-size: 1.4em;
+    transition: color 0.3s;
+}
+
+footer .redes a:hover {
+    color: #e63946;
+}
+
+footer .linea-div {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 20px auto;
+    width: 80%;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* AJUSTES RESPONSIVE */
+@media (max-width: 600px) {
+    .hero-texto h2 {
+        font-size: 2em;
+    }
+
+    .info, .hero {
+        padding: 40px 20px;
+    }
+
+    #faq {
+        padding: 40px 20px;
     }
 }
