@@ -193,7 +193,7 @@ nav ul.menu li a i {
 
 .servicios-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -208,10 +208,10 @@ nav ul.menu li a i {
 .card i {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #ff2e8c;
 }
 
 .card h3 {
+    color: #ff2e8c;
     margin-bottom: 1rem;
     font-size: 1.4rem;
 }
@@ -249,6 +249,10 @@ nav ul.menu li a i {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.persona h3 {
+    color: #ff2e8c;
+}
+
 .persona:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(255, 0, 76, 0.3);
@@ -257,7 +261,7 @@ nav ul.menu li a i {
 .persona .icono i {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #ff2e8c;
+    color: #ff004c;
 }
 
 /* FAQ */
@@ -302,7 +306,7 @@ nav ul.menu li a i {
 }
 
 .faq-question:hover {
-    background: #ff2e8c;
+    background: #ff004c;;
 }
 
 .faq-answer {
