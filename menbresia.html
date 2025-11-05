@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Membresías | FITNESS GYM</title>
+    <title>FITNESS GYM – Planes</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="menbresia.css">
@@ -27,7 +27,7 @@
     </nav>
 
     <!-- HERO -->
-    <header class="hero-mini">
+    <header class="hero-mini" style="background:url('https://images.unsplash.com/photo-1594737625785-c0f92a43fdf9?auto=format&fit=crop&w=1350&q=80') center/cover;">
         <div class="hero-mini-text">
             <h1>Nuestras Membresías</h1>
             <p>Elige el plan que mejor se adapte a tus objetivos y entrena sin límites.</p>
@@ -51,7 +51,7 @@
                     <li>Locker y vestuario incluidos</li>
                     <li>Horarios flexibles</li>
                 </ul>
-                <a href="contactanos.html" class="btn-cta">Contratar</a>
+                <a href="#registro" class="btn-cta">Unirme ahora</a>
             </article>
 
             <article class="plan destacado">
@@ -63,7 +63,7 @@
                     <li>Evaluación física inicial</li>
                     <li>Asesoría nutricional básica</li>
                 </ul>
-                <a href="contactanos.html" class="btn-cta btn-primary">Contratar</a>
+                <a href="#registro" class="btn-cta btn-primary">Unirme ahora</a>
             </article>
 
             <article class="plan">
@@ -75,15 +75,71 @@
                     <li>Plan nutricional personalizado</li>
                     <li>Eventos y retos exclusivos</li>
                 </ul>
-                <a href="contactanos.html" class="btn-cta">Contratar</a>
+                <a href="#registro" class="btn-cta">Unirme ahora</a>
             </article>
         </section>
     </main>
 
-    <!-- LÍNEA DIVISORIA -->
-    <div class="divider"></div>
+    <!-- PLANES COMPARACIÓN -->
+    <section class="comparativa">
+        <h2>Comparativa de beneficios</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Beneficio</th>
+                    <th>Básico</th>
+                    <th>Estándar</th>
+                    <th>Premium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Acceso a gimnasio</td><td>Incluido</td><td>Incluido</td><td>Incluido</td></tr>
+                <tr><td>Clases grupales</td><td>—</td><td>4 al mes</td><td>Ilimitadas</td></tr>
+                <tr><td>Asesor nutricional</td><td>—</td><td>Básica</td><td>Personalizada</td></tr>
+                <tr><td>Entrenador personal</td><td>—</td><td>—</td><td>Incluido</td></tr>
+                <tr><td>Eventos exclusivos</td><td>—</td><td>—</td><td>Incluido</td></tr>
+            </tbody>
+        </table>
+    </section>
 
-    <!-- CTA -->
+    <!-- TESTIMONIOS -->
+    <section class="testimonios">
+        <h2>Lo que dicen nuestros miembros</h2>
+        <div class="testimonios-grid">
+            <article>
+                <p>"Desde que me uní al Plan Estándar, he notado grandes resultados. ¡El ambiente y los entrenadores son increíbles!"</p>
+                <h4>- Carla M.</h4>
+            </article>
+            <article>
+                <p>"Con el Plan Premium tengo todo lo que necesito: clases, nutrición y entrenador personal. ¡Vale cada sol!"</p>
+                <h4>- Diego R.</h4>
+            </article>
+            <article>
+                <p>"Excelente atención y equipos modernos. Recomiendo el plan básico si estás empezando."</p>
+                <h4>- Lucía T.</h4>
+            </article>
+        </div>
+    </section>
+
+    <!-- REGISTRO -->
+    <section id="registro" class="registro">
+        <h2>Únete a FITNESS GYM</h2>
+        <p>Completa el formulario y comienza tu cambio hoy.</p>
+        <form>
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <select required>
+                <option value="">Selecciona tu plan</option>
+                <option>Plan Básico</option>
+                <option>Plan Estándar</option>
+                <option>Plan Premium</option>
+            </select>
+            <button type="submit" class="btn-cta btn-primary">Registrarme</button>
+        </form>
+    </section>
+
+    <!-- CTA FINAL -->
+    <div class="divider"></div>
     <section class="cta-contacto">
         <h3>¿Listo para un nuevo comienzo?</h3>
         <p>Contáctanos y recibe la orientación ideal para elegir tu membresía perfecta.</p>
