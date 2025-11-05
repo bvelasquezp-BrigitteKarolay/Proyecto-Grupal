@@ -51,60 +51,66 @@ nav ul.menu li a i {
 /* HERO */
 .hero {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     height: 100vh;
-    background: url('https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/main/IMAGEN%202%20GYM.png') no-repeat center/cover;
+    width: 100%;
+    background: url('https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/main/IMAGEN%202%20GYM.png') no-repeat center center/cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 6%;
+    padding-bottom: 5%;
+    color: #fff;
+    overflow: hidden;
 }
 
 .hero::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
 }
 
 .hero-text {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 600px;
     animation: fadeInUp 1s ease forwards;
 }
 
-.hero h1 {
-    font-size: 3rem;
+.hero h1 { 
+    font-size: 60px;
     font-weight: 800;
-    margin-bottom: 1rem;
-}
-
-.hero h1 span {
-    color: #ff004c;
+    color: #ff2e8c;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
 }
 
 .hero .btn {
     display: inline-block;
-    padding: 0.8rem 2rem;
-    background: #ff004c;
+    padding: 1rem 2.5rem;
+    background: #ff2e8c;
     color: #fff;
-    font-weight: 600;
-    border-radius: 40px;
+    font-weight: 700;
+    border-radius: 10px;
     text-decoration: none;
-    margin-top: 1rem;
-    transition: background 0.3s;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 0, 76, 0.6);
 }
 
 .hero .btn:hover {
-    background: #e60042;
+    background: #fff;
+    color: #ff004c;
+    box-shadow: 0 0 30px rgba(255, 0, 76, 0.9);
+    transform: translateY(-3px);
 }
 
-/* Animación Hero */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(40px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
 /* NOSOTROS */
 .nosotros {
@@ -116,47 +122,61 @@ nav ul.menu li a i {
 .nosotros h2 {
     text-align: center;
     font-size: 2.5rem;
+    color: #ff2e8c; /* Mantener el color que tenías */
     margin-bottom: 3rem;
-    color: #ff004c;
 }
 
 .nosotros-content {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    align-items: center;
+    align-items: stretch;
 }
 
 .nosotros-img img {
     width: 100%;
     max-width: 500px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    object-fit: cover;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.nosotros-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: inherit; /* Mantener el color original de la letra */
 }
 
 .nosotros-text p {
-    margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
 
 .mision-vision {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 1rem;
 }
 
 .recuadro {
     flex: 1;
-    background: #1a1a1a;
-    padding: 1.5rem;
+    background: #1a1a1a; /* puedes cambiar si tu diseño tiene otro fondo */
     border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .recuadro h3 {
-    color: #ff004c;
-    margin-bottom: 1rem;
+    color: #ff2e8c; /* Mantener color de títulos */
+    margin-bottom: 0.8rem;
 }
+
 
 /* SERVICIOS */
 .servicios {
@@ -168,7 +188,7 @@ nav ul.menu li a i {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #ff004c;
+    color: #ff2e8c;
 }
 
 .servicios-container {
@@ -178,7 +198,7 @@ nav ul.menu li a i {
 }
 
 .card {
-    background: #1a1a1a;
+    background: #111;
     padding: 2rem;
     border-radius: 16px;
     text-align: center;
@@ -188,7 +208,7 @@ nav ul.menu li a i {
 .card i {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #ff004c;
+    color: #ff2e8c;
 }
 
 .card h3 {
@@ -210,7 +230,7 @@ nav ul.menu li a i {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #ff004c;
+    color: #ff2e8c;
 }
 
 .equipo-container {
@@ -237,7 +257,7 @@ nav ul.menu li a i {
 .persona .icono i {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #ff004c;
+    color: #ff2e8c;
 }
 
 /* FAQ */
@@ -250,7 +270,7 @@ nav ul.menu li a i {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #ff004c;
+    color: #ff2e8c;
 }
 
 .faq-container {
@@ -282,7 +302,7 @@ nav ul.menu li a i {
 }
 
 .faq-question:hover {
-    background: #ff004c;
+    background: #ff2e8c;
 }
 
 .faq-answer {
@@ -317,7 +337,7 @@ nav ul.menu li a i {
 .contacto .info h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #ff004c;
+    color: #ff2e8c;
 }
 
 .contacto iframe {
@@ -336,24 +356,19 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    text-align: center;
 }
 
-footer .footer-logo img {
-    width: 120px;
+footer img {
+    width: 80px;
 }
 
-footer .social-footer a {
+footer p {
     color: #fff;
-    font-size: 1.3rem;
-    margin-left: 1rem;
-    transition: color 0.3s;
+    font-size: 0.9rem;
 }
 
-footer .social-footer a:hover {
-    color: #ff004c;
-}
-
-/* REDES*/
+/* REDES SOCIALES */
 .social-sidebar {
     position: fixed;
     bottom: 0;
@@ -362,6 +377,7 @@ footer .social-footer a:hover {
     flex-direction: column;
     gap: 10px;
     z-index: 999;
+    padding: 1rem;
 }
 
 .social-icon {
@@ -390,13 +406,22 @@ footer .social-footer a:hover {
 .whatsapp:hover { background: #25D366; }
 .github:hover { background: #333; }
 
-
-/* RESPONSIVE*/
+/* RESPONSIVE */
 @media (max-width: 992px) {
     .nosotros-content,
     .equipo-container,
     .contacto {
         flex-direction: column;
         align-items: center;
+    }
+
+    .hero {
+        text-align: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
     }
 }
