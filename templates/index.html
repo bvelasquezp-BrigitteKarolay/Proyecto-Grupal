@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNESS GYM – Despierta tu mejor versión</title>
+    <meta name="description" content="Entrena, mejora y transforma tu vida con FITNESS GYM, el gimnasio moderno que impulsa tu bienestar físico y mental.">
+
+    <!-- Fuentes y estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <img src="https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/LOGO%20GYM.png" alt="Logo FITNESS GYM" class="logo-img">
+        </div>
+        <ul class="menu">
+            <li><a href="{{ url_for('index') }}" class="active">Inicio</a></li>
+            <li><a href="{{ url_for('index') }}#nosotros">Nosotros</a></li>
+            <li><a href="{{ url_for('index') }}#servicios">Servicios</a></li>
+            <li><a href="{{ url_for('index') }}#equipo">Equipo</a></li>
+            <li><a href="{{ url_for('index') }}#faq">Preguntas</a></li>
+            <li><a href="{{ url_for('contacto.contactanos') }}">Contáctanos</a></li>
+            <!-- Opciones de usuario -->
+            <li><a href="{{ url_for('usuario.login') }}"><i class='bx bx-log-in'></i> Iniciar sesión</a></li>
+            <li><a href="{{ url_for('usuario.registro') }}"><i class='bx bx-user-plus'></i> Registrarse</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="inicio">
+        <div class="hero-text">
+            <h1>Transforma tu <span>energía y fuerza</span></h1>
+            <a href="{{ url_for('usuario.registro') }}" class="btn">¡ÚNETE HOY MISMO!</a>
+            <a href="{{ url_for('reserva.reserva') }}" class="btn">Haz tu reserva</a>
+
+        </div>
+    </header>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <div class="nosotros-content">
+            <div class="nosotros-img">
+                <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/main/IMAGEN%201%20GYM%20(1).png" alt="Entrenadora fitness">
+            </div>
+            <div class="nosotros-text">
+                <p><strong>FITNESS GYM</strong> es una comunidad que impulsa tu bienestar físico y mental, promoviendo hábitos saludables, motivación constante y superación personal.</p>
+                <div class="mision-vision">
+                    <div class="recuadro">
+                        <h3>Misión</h3>
+                        <p>Ayudarte a alcanzar tus metas de salud, fuerza y bienestar integral con programas personalizados, entrenadores certificados y tecnología de punta.</p>
+                    </div>
+                    <div class="recuadro">
+                        <h3>Visión</h3>
+                        <p>Ser el gimnasio líder en Arequipa y referente nacional en innovación, motivación y resultados medibles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-container">
+            <div class="card">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Entrenamiento Personalizado</h3>
+                <p>Rutinas adaptadas a tu nivel físico y metas, con seguimiento constante y ajuste progresivo.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-apple-alt"></i>
+                <h3>Nutrición y Bienestar</h3>
+                <p>Planes nutricionales completos y asesoramiento en hábitos saludables.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Clases Grupales</h3>
+                <p>Spinning, Zumba, Yoga, HIIT y más, diseñadas para todos los niveles.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Motivación y Coaching</h3>
+                <p>Entrenadores profesionales que te guían, motivan y enseñan técnicas avanzadas.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop"></i>
+                <h3>Entrenamiento Online</h3>
+                <p>Clases virtuales en vivo y grabadas, para entrenar desde cualquier lugar.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-trophy"></i>
+                <h3>Desafíos Fitness</h3>
+                <p>Participa en retos mensuales que miden tu progreso y fomentan la constancia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section id="equipo" class="equipo">
+        <h2>Equipo de Entrenadores</h2>
+        <div class="equipo-container">
+            <div class="persona">
+                <div class="icono"><i class='fas fa-user'></i></div>
+                <h3>Karolay</h3>
+                <p><strong>Especialidad:</strong> Fuerza y Tonificación</p>
+                <p>Entrenadora profesional con años de experiencia en desarrollo muscular y acondicionamiento físico.</p>
+            </div>
+            <div class="persona">
+                <div class="icono"><i class='fas fa-user'></i></div>
+                <h3>Vanessa</h3>
+                <p><strong>Especialidad:</strong> Cardio y Resistencia</p>
+                <p>Entrenadora experta en programas de cardio y ejercicios funcionales para mejorar energía y rendimiento.</p>
+            </div>
+            <div class="persona">
+                <div class="icono"><i class='fas fa-user'></i></div>
+                <h3>Sammy</h3>
+                <p><strong>Especialidad:</strong> Flexibilidad y Bienestar</p>
+                <p>Especialista en yoga y estiramientos, enfocándose en equilibrio, postura y prevención de lesiones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">Horario <i class='bx bx-chevron-down'></i></button>
+                <div class="faq-answer"><p>Lunes a Sábado, 6:00am - 10:00pm</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Ofrecen planes personalizados? <i class='bx bx-chevron-down'></i></button>
+                <div class="faq-answer"><p>Sí, con asesoramiento de nuestros entrenadores certificados.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Puedo entrenar online? <i class='bx bx-chevron-down'></i></button>
+                <div class="faq-answer"><p>Clases virtuales en vivo y grabadas para entrenar desde cualquier lugar.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Qué tipo de clases grupales ofrecen? <i class='bx bx-chevron-down'></i></button>
+                <div class="faq-answer"><p>Spinning, Zumba, Yoga, HIIT, BodyPump y más, diseñadas para todos los niveles.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Tienen programas de retos mensuales? <i class='bx bx-chevron-down'></i></button>
+                <div class="faq-answer"><p>Sí, desafíos fitness para medir tu progreso y motivar la constancia.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="info">
+            <h2>Contáctanos</h2>
+            <p><i class='bx bxs-map'></i> Arequipa, Perú</p>
+            <p><i class='bx bxs-phone'></i> +51 948 019 629</p>
+            <p><i class='bx bxs-phone'></i> +51 929 377 161</p>
+            <p><i class='bx bxs-envelope'></i> contacto@fitnessgym.com</p>
+        </div>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.482631871654!2d-71.53896148584637!3d-16.40904778846357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424dbd718989b9%3A0x31b7d80c35a6f143!2sArequipa%2C%20Peru!5e0!3m2!1ses-419!2sus!4v1699073921234!5m2!1ses-419!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/LOGO%20GYM.png" alt="Logo FITNESS GYM" width="80">
+        <p>© 2025 FITNESS GYM – Todos los derechos reservados</p>
+    </footer>
+
+    <!-- REDES SOCIALES -->
+    <div class="social-sidebar">
+        <a href="https://www.instagram.com/" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/51948019629" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/funcionalidades.js') }}" defer></script>
+</body>
+</html>

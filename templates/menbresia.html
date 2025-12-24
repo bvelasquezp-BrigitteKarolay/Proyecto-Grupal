@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>FITNESS GYM – Planes</title>
+
+    <!-- Fuentes y estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="menbresia.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menbresia.css') }}">
 </head>
+<body>
+
 <body>
     <!-- NAVBAR -->
     <nav>
@@ -151,5 +155,7 @@
         <img src="https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/LOGO%20GYM.png" alt="Logo" width="80">
         <p>© 2025 FITNESS GYM — Todos los derechos reservados</p>
     </footer>
+
+    <script src="{{ url_for('static', filename='js/funcionalidades.js') }}" defer></script>
 </body>
 </html>

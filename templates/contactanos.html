@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="contactano.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contactanos.css') }}">
+
 </head>
 <body>
     <!-- NAVBAR -->
@@ -16,13 +17,15 @@
             <img src="https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/LOGO%20GYM.png" alt="Logo FITNESS GYM" class="logo-img">
         </div>
         <ul class="menu">
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="index.html#nosotros">Nosotros</a></li>
-            <li><a href="index.html#servicios">Servicios</a></li>
-            <li><a href="index.html#equipo">Equipo</a></li>
-            <li><a href="index.html#faq">Preguntas</a></li>
-            <li><a href="contactanos.html">Contáctanos</a></li>
-            <li><a href="#"><i class='bx bx-log-in'></i></a></li>
+            <li><a href="{{ url_for('index') }}" class="active">Inicio</a></li>
+            <li><a href="{{ url_for('index') }}#nosotros">Nosotros</a></li>
+            <li><a href="{{ url_for('index') }}#servicios">Servicios</a></li>
+            <li><a href="{{ url_for('index') }}#equipo">Equipo</a></li>
+            <li><a href="{{ url_for('index') }}#faq">Preguntas</a></li>
+            <li><a href="{{ url_for('contacto.contactanos') }}">Contáctanos</a></li>
+            <!-- Opciones de usuario -->
+            <li><a href="{{ url_for('usuario.login') }}"><i class='bx bx-log-in'></i> Iniciar sesión</a></li>
+            <li><a href="{{ url_for('usuario.registro') }}"><i class='bx bx-user-plus'></i> Registrarse</a></li>
         </ul>
     </nav>
 
@@ -76,5 +79,7 @@
         <img src="https://github.com/bvelasquezp-BrigitteKarolay/Proyecto-Grupal/raw/main/LOGO%20GYM.png" alt="Logo" width="80" style="margin-bottom:10px;">
         <p>© 2025 FITNESS GYM – Todos los derechos reservados</p>
     </footer>
+
+    <script src="{{ url_for('static', filename='js/funcionalidades.js') }}" defer></script>
 </body>
 </html>
